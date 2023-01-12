@@ -1,0 +1,19 @@
+CREATE DATABASE Chat;
+use Chat
+
+CREATE TABLE `User` (
+	`id` VARCHAR(30) NOT NULL DEFAULT '',
+	`password` VARCHAR(30) NOT NULL DEFAULT '',
+	`name` VARCHAR(30) NOT NULL DEFAULT '',
+	`connected` INT NOT NULL DEFAULT 0,
+	PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `Message` (
+	`id` INT NOT NULL DEFAULT '0',
+	`sender` VARCHAR(30) NOT NULL DEFAULT '',
+	`receiver` VARCHAR(30) NOT NULL DEFAULT '',
+	`message` VARCHAR(280) NOT NULL DEFAULT '',
+	`seen` INT NOT NULL DEFAULT 0,
+	PRIMARY KEY (`id`)
+);
